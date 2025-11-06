@@ -24,3 +24,6 @@ for p in participants:
 
 print("\nTracks Offered in this Event:")
 print(", ".join(tracks))
+
+if len(tracks) < 2:
+    print("Not Enough Variety in Tracks")
