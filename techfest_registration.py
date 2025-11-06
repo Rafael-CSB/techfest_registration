@@ -32,8 +32,19 @@ duplicate = False
 for i in range(len(participants)):
     for j in range(i+1, len(participants)):
         if participants[i]["name"] == participants[j]["name"]:
-            print("\nDuplicate Participant:", participants[i]["name"])
+            print("\nDuplicate Participant Found:", participants[i]["name"])
             duplicate = True
 if not duplicate:
     print("\nNo Duplicate Names Found")
 
+print("\nParticipants Per Tracks:")
+track_count = {}
+
+for p in participants:
+    if p["track"] in track_count:
+        track_count[p["track"]] += 1
+    else:
+        track_count[p["track"]] = 1
+
+for t in track_count:
+    print(t + ": " + str(track_count[t]))
