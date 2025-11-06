@@ -29,4 +29,3 @@ if len(tracks) < 2:
     print("Not Enough Variety in Tracks")
 
 duplicate = False
-for i in range(len(participants)):
