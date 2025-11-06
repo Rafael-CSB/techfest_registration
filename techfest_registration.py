@@ -29,3 +29,11 @@ if len(tracks) < 2:
     print("Not Enough Variety in Tracks")
 
 duplicate = False
+for i in range(len(participants)):
+    for j in range(i+1, len(participants)):
+        if participants[i]["name"] == participants[j]["name"]:
+            print("\nDuplicate Participant:", participants[i]["name"])
+            duplicate = True
+if not duplicate:
+    print("\nNo Duplicate Names Found")
+
