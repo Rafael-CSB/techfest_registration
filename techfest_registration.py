@@ -11,9 +11,16 @@ for i in range(num_parti):
     print("\nParticipant", i+1, ":")
     name = input("Enter Participant Name: ")
     track = input("Enter Chosen Track: ")
-    participant = {"name": name, "track": track}
-    participants.append(participant)
+    participants.append({"name": name, "track": track})
 
 print("\nRegistered Participants:")
 for i in range(len(participants)):
     print(str(i+1) + ".", participants[i]["name"], "-", participants[i]["track"])
+
+tracks = []
+for p in participants:
+    if p["track"] not in tracks:
+        tracks.append(p["track"])
+
+print("\nTracks Offered in this Event:")
+print(", ".join(tracks))
